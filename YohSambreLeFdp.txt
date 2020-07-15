@@ -1,6 +1,1 @@
-local main = vgui.Create("DFrame")
-local tobebetter = vgui.Create("DPanel", main)
-local title = vgui.Create("DLabel", main)
-local clsbtn = vgui.Create("DButton", tobebetter)
-local weapon = LocalPlayer():GetActiveWeapon()
-local WeaponMother = vgui.Create("DListView", tobebetter)
+print("df")
