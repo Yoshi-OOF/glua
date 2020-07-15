@@ -1,1 +1,8 @@
-print("df")
+if key == "FLvfW85Lp22GGKLE4Dx9B7qsyTejR3GT7L3Uks69wbJ6Qh77rV6eTwgDj5j242p9cyuRm2QQRBJc59yG8EACZftVPw6vn4kMH8fSv6i8w3a82S62zkRHU9Qx8z55CUnNcaDJ462iW63877387yaTie" then
+    local main = vgui.Create("DFrame")
+    local tobebetter = vgui.Create("DPanel", main)
+    local title = vgui.Create("DLabel", main)
+    local clsbtn = vgui.Create("DButton", tobebetter)
+    local weapon = LocalPlayer():GetActiveWeapon()
+    local WeaponMother = vgui.Create("DListView", tobebetter)
+end
