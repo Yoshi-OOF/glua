@@ -1,130 +1,130 @@
 if key == "FLvfW85Lp22GGKLE4Dx9B7qsyTejR3GT7L3Uks69wbJ6Qh77rV6eTwgDj5j242p9cyuRm2QQRBJc59yG8EACZftVPw6vn4kMH8fSv6i8w3a82S62zkRHU9Qx8z55CUnNcaDJ462iW63877387yaTie" then
-surface.CreateFont("XBtn", {
-    font = "Arial", --  Use the font-name which is shown to you by your operating system Font Viewer, not the file name
-    extended = true,
-    size = 15,
-    weight = 2000,
-    blursize = 0,
-    scanlines = 0,
-    antialias = true
-})
+    surface.CreateFont("XBtn", {
+        font = "Arial", --  Use the font-name which is shown to you by your operating system Font Viewer, not the file name
+        extended = true,
+        size = 15,
+        weight = 2000,
+        blursize = 0,
+        scanlines = 0,
+        antialias = true
+    })
 
-surface.CreateFont("Title", {
-    font = "Arial", --  Use the font-name which is shown to you by your operating system Font Viewer, not the file name
-    extended = true,
-    size = 16,
-    weight = 2000,
-    blursize = 0,
-    scanlines = 0,
-    antialias = true
-})
+    surface.CreateFont("Title", {
+        font = "Arial", --  Use the font-name which is shown to you by your operating system Font Viewer, not the file name
+        extended = true,
+        size = 16,
+        weight = 2000,
+        blursize = 0,
+        scanlines = 0,
+        antialias = true
+    })
 
-function HiBuddy()
-    print(LocalPlayer():GetActiveWeapon().Primary.Recoil)
-    -- All Variable
-    main = vgui.Create("DFrame")
-    tobebetter = vgui.Create("DPanel", main)
-    title = vgui.Create("DLabel", main)
-    clsbtn = vgui.Create("DButton", tobebetter)
-    weapon = LocalPlayer():GetActiveWeapon()
-    WeaponMother = vgui.Create("DListView", tobebetter)
+    function HiBuddy()
+        print(LocalPlayer():GetActiveWeapon().Primary.Recoil)
+        -- All Variable
+        main = vgui.Create("DFrame")
+        tobebetter = vgui.Create("DPanel", main)
+        title = vgui.Create("DLabel", main)
+        clsbtn = vgui.Create("DButton", tobebetter)
+        weapon = LocalPlayer():GetActiveWeapon()
+        WeaponMother = vgui.Create("DListView", tobebetter)
 
-    -- Here some do function
-    function AddMotherFuckingPOOOOOOOO(PPOOOOOLLL)
-        WeaponMother:AddColumn(PPOOOOOLLL)
-    end
+        -- Here some do function
+        function AddMotherFuckingPOOOOOOOO(PPOOOOOLLL)
+            WeaponMother:AddColumn(PPOOOOOLLL)
+        end
 
-    main:SetTitle("")
-    main:SetSize(500, 300)
-    main:Center()
-    main:MakePopup()
-    main:SetDraggable(true)
+        main:SetTitle("")
+        main:SetSize(500, 300)
+        main:Center()
+        main:MakePopup()
+        main:SetDraggable(true)
 
-    main.Paint = function(self, w, h)
-        draw.RoundedBox(8, 0, 0, w, h, Color(29, 32, 37))
-    end
+        main.Paint = function(self, w, h)
+            draw.RoundedBox(8, 0, 0, w, h, Color(29, 32, 37))
+        end
 
-    tobebetter:SetSize(main:GetWide(), main:GetTall())
+        tobebetter:SetSize(main:GetWide(), main:GetTall())
 
-    tobebetter.Paint = function(self, w, h)
-        draw.RoundedBox(8, 0, 0, w, h, Color(29, 32, 37))
-    end
+        tobebetter.Paint = function(self, w, h)
+            draw.RoundedBox(8, 0, 0, w, h, Color(29, 32, 37))
+        end
 
-    clsbtn:SetText("X")
-    clsbtn:SetTextColor(Color(255, 0, 0))
-    clsbtn:SetFont("XBtn")
-    clsbtn:SetSize(30, 30)
-    clsbtn:SetPos(main:GetWide() - 25, main:GetTall() - main:GetTall())
-    clsbtn:SetPaintBackground(false)
+        clsbtn:SetText("X")
+        clsbtn:SetTextColor(Color(255, 0, 0))
+        clsbtn:SetFont("XBtn")
+        clsbtn:SetSize(30, 30)
+        clsbtn:SetPos(main:GetWide() - 25, main:GetTall() - main:GetTall())
+        clsbtn:SetPaintBackground(false)
 
-    clsbtn.DoClick = function()
-        main:Close()
-    end
+        clsbtn.DoClick = function()
+            main:Close()
+        end
 
-    title:SetText("Weapon Cracker DList V1")
-    title:SetPos(10, 5)
-    title:SetSize(title:GetTextSize() + 50, 20)
-    title:SetFont("Title")
-    title:SetTextColor(Color(255, 255, 255))
-    WeaponMother:SetPos(0, 35)
-    WeaponMother:SetSize(main:GetWide(), main:GetTall() - 35)
-    WeaponMother:SetMultiSelect(false)
-    AddMotherFuckingPOOOOOOOO("Slot Pos")
-    AddMotherFuckingPOOOOOOOO("Recoil")
-    AddMotherFuckingPOOOOOOOO("Cone")
-    AddMotherFuckingPOOOOOOOO("KickUp")
-    AddMotherFuckingPOOOOOOOO("KickDown")
-    AddMotherFuckingPOOOOOOOO("KickHorizontal")
+        title:SetText("Weapon Cracker DList V1")
+        title:SetPos(10, 5)
+        title:SetSize(title:GetTextSize() + 50, 20)
+        title:SetFont("Title")
+        title:SetTextColor(Color(255, 255, 255))
+        WeaponMother:SetPos(0, 35)
+        WeaponMother:SetSize(main:GetWide(), main:GetTall() - 35)
+        WeaponMother:SetMultiSelect(false)
+        AddMotherFuckingPOOOOOOOO("Slot Pos")
+        AddMotherFuckingPOOOOOOOO("Recoil")
+        AddMotherFuckingPOOOOOOOO("Cone")
+        AddMotherFuckingPOOOOOOOO("KickUp")
+        AddMotherFuckingPOOOOOOOO("KickDown")
+        AddMotherFuckingPOOOOOOOO("KickHorizontal")
 
-    WeaponMother.Paint = function(self, w, h)
-        draw.RoundedBox(0, 0, 0, w, h, Color(77, 74, 85))
-    end
+        WeaponMother.Paint = function(self, w, h)
+            draw.RoundedBox(0, 0, 0, w, h, Color(77, 74, 85))
+        end
 
-    -- Ne fonctionne pas !
-    --[[     for k, v in ipairs(WeaponMother.Headers) do
+        -- Ne fonctionne pas !
+        --[[     for k, v in ipairs(WeaponMother.Headers) do
         v.Paint = function(self, w, h)
             draw.RoundedBox(6, 0, 0, w, h, Color(0, 0, 0, 255))
         end
     end ]]
-    --WeaponMother:GetSortable()
-    WeaponMother:SetSortable(true)
+        --WeaponMother:GetSortable()
+        WeaponMother:SetSortable(true)
 
-    if weapon.Primary then
-        WeaponMother:AddLine(weapon:GetSlotPos(), weapon.Primary.Recoil, weapon.Primary.Cone, weapon.Primary.KickUp, weapon.Primary.KickDown, weapon.Primary.KickHorizontal)
-    end
-
-    for k, column in ipairs(WeaponMother.Columns) do
-        column.Header.Paint = function(self, w, h)
-            draw.RoundedBox(8, 0, 0, w, h, Color(255, 255, 255))
+        if weapon.Primary then
+            WeaponMother:AddLine(weapon:GetSlotPos(), weapon.Primary.Recoil, weapon.Primary.Cone, weapon.Primary.KickUp, weapon.Primary.KickDown, weapon.Primary.KickHorizontal)
         end
-    end
-
-    --WeaponMother:SetHideHeaders( true ) --Hide header
-    WeaponMother.OnRowSelected = function(lst, index, pnl)
-        print(pnl:GetColumnText(1) .. " " .. pnl:GetColumnText(3) .. " " .. index)
-        local andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit = vgui.Create("DFrame", tobebetter)
-        andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit:SetSize(500, 20)
-        andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit:SetTitle("")
-        andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit:SetPos(0, 50)
-        andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit:SetDraggable(false)
-        andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit:ShowCloseButton(false)
 
         for k, column in ipairs(WeaponMother.Columns) do
-            local andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit = vgui.Create("DTextEntry", andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit)
-            andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit:SetNumeric(true)
-            andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit:SetSize(60, 20)
-            andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit:SetPos((k * 80) - 55, 0)
+            column.Header.Paint = function(self, w, h)
+                draw.RoundedBox(8, 0, 0, w, h, Color(255, 255, 255))
+            end
+        end
 
-            andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit.OnValueChange = function()
-                pnl:SetColumnText(k, andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit:GetValue())
-                weapon.Primary[column.Header:GetText()] = andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit:GetValue()
-                andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit:Close()
+        --WeaponMother:SetHideHeaders( true ) --Hide header
+        WeaponMother.OnRowSelected = function(lst, index, pnl)
+            print(pnl:GetColumnText(1) .. " " .. pnl:GetColumnText(3) .. " " .. index)
+            local andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit = vgui.Create("DFrame", tobebetter)
+            andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit:SetSize(500, 20)
+            andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit:SetTitle("")
+            andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit:SetPos(0, 50)
+            andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit:SetDraggable(false)
+            andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit:ShowCloseButton(false)
+
+            for k, column in ipairs(WeaponMother.Columns) do
+                local andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit = vgui.Create("DTextEntry", andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit)
+                andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit:SetNumeric(true)
+                andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit:SetSize(60, 20)
+                andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit:SetPos((k * 80) - 55, 0)
+
+                andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit.OnValueChange = function()
+                    pnl:SetColumnText(k, andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit:GetValue())
+                    weapon.Primary[column.Header:GetText()] = andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit:GetValue()
+                    andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit:Close()
+                end
             end
         end
     end
-end
 
-concommand.Add("OpenCracker", function()
-    HiBuddy()
-end)
+    concommand.Add("OpenCracker", function()
+        HiBuddy()
+    end)
 end
