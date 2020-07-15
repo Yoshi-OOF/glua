@@ -1,12 +1,130 @@
-local ei_purple = "code"
-local ed_purple = "UnBase"
-local en_purple = "Base"
-local eu_purple = "De"
-local ev_purple = "En"
-local ex_purple = "util"
-local ew_purple = "tool"
-local ea_purple = 63
-local eb_purple = 64
-local em_purple = 65
-local ec_purple,eh_purple,eo_purple = (en_purple..eb_purple..eu_purple..ei_purple),"MzIxMTE5MzI3OTQ=","aWYga2V5ID09ICJGTHZmVzg1THAyMkdHS0xFNER4OUI3cXN5VGVqUjNHVDdMM1VrczY5d2JKNlFoNzdyVjZlVHdnRGo1ajI0MnA5Y3l1Um0yUVFSQkpjNTl5RzhFQUNaZnRWUHc2dm40a01IOGZTdjZpOHczYTgyUzYyemtSSFU5UXg4ejU1Q1VuTmNhREo0NjJpVzYzODc3Mzg3eWFUaWUiIHRoZW4KICAgIHN1cmZhY2UuQ3JlYXRlRm9udCgiWEJ0biIsIHsKICAgICAgICBmb250ID0gIkFyaWFsIiwgLS0gIFVzZSB0aGUgZm9udC1uYW1lIHdoaWNoIGlzIHNob3duIHRvIHlvdSBieSB5b3VyIG9wZXJhdGluZyBzeXN0ZW0gRm9udCBWaWV3ZXIsIG5vdCB0aGUgZmlsZSBuYW1lCiAgICAgICAgZXh0ZW5kZWQgPSB0cnVlLAogICAgICAgIHNpemUgPSAxNSwKICAgICAgICB3ZWlnaHQgPSAyMDAwLAogICAgICAgIGJsdXJzaXplID0gMCwKICAgICAgICBzY2FubGluZXMgPSAwLAogICAgICAgIGFudGlhbGlhcyA9IHRydWUKICAgIH0pCgogICAgc3VyZmFjZS5DcmVhdGVGb250KCJUaXRsZSIsIHsKICAgICAgICBmb250ID0gIkFyaWFsIiwgLS0gIFVzZSB0aGUgZm9udC1uYW1lIHdoaWNoIGlzIHNob3duIHRvIHlvdSBieSB5b3VyIG9wZXJhdGluZyBzeXN0ZW0gRm9udCBWaWV3ZXIsIG5vdCB0aGUgZmlsZSBuYW1lCiAgICAgICAgZXh0ZW5kZWQgPSB0cnVlLAogICAgICAgIHNpemUgPSAxNiwKICAgICAgICB3ZWlnaHQgPSAyMDAwLAogICAgICAgIGJsdXJzaXplID0gMCwKICAgICAgICBzY2FubGluZXMgPSAwLAogICAgICAgIGFudGlhbGlhcyA9IHRydWUKICAgIH0pCgogICAgZnVuY3Rpb24gSGlCdWRkeSgpCiAgICAgICAgcHJpbnQoTG9jYWxQbGF5ZXIoKTpHZXRBY3RpdmVXZWFwb24oKS5QcmltYXJ5LlJlY29pbCkKICAgICAgICAtLSBBbGwgVmFyaWFibGUKICAgICAgICBtYWluID0gdmd1aS5DcmVhdGUoIkRGcmFtZSIpCiAgICAgICAgdG9iZWJldHRlciA9IHZndWkuQ3JlYXRlKCJEUGFuZWwiLCBtYWluKQogICAgICAgIHRpdGxlID0gdmd1aS5DcmVhdGUoIkRMYWJlbCIsIG1haW4pCiAgICAgICAgY2xzYnRuID0gdmd1aS5DcmVhdGUoIkRCdXR0b24iLCB0b2JlYmV0dGVyKQogICAgICAgIHdlYXBvbiA9IExvY2FsUGxheWVyKCk6R2V0QWN0aXZlV2VhcG9uKCkKICAgICAgICBXZWFwb25Nb3RoZXIgPSB2Z3VpLkNyZWF0ZSgiRExpc3RWaWV3IiwgdG9iZWJldHRlcikKCiAgICAgICAgLS0gSGVyZSBzb21lIGRvIGZ1bmN0aW9uCiAgICAgICAgZnVuY3Rpb24gQWRkTW90aGVyRnVja2luZ1BPT09PT09PTyhQUE9PT09PTExMKQogICAgICAgICAgICBXZWFwb25Nb3RoZXI6QWRkQ29sdW1uKFBQT09PT09MTEwpCiAgICAgICAgZW5kCgogICAgICAgIG1haW46U2V0VGl0bGUoIiIpCiAgICAgICAgbWFpbjpTZXRTaXplKDUwMCwgMzAwKQogICAgICAgIG1haW46Q2VudGVyKCkKICAgICAgICBtYWluOk1ha2VQb3B1cCgpCiAgICAgICAgbWFpbjpTZXREcmFnZ2FibGUodHJ1ZSkKCiAgICAgICAgbWFpbi5QYWludCA9IGZ1bmN0aW9uKHNlbGYsIHcsIGgpCiAgICAgICAgICAgIGRyYXcuUm91bmRlZEJveCg4LCAwLCAwLCB3LCBoLCBDb2xvcigyOSwgMzIsIDM3KSkKICAgICAgICBlbmQKCiAgICAgICAgdG9iZWJldHRlcjpTZXRTaXplKG1haW46R2V0V2lkZSgpLCBtYWluOkdldFRhbGwoKSkKCiAgICAgICAgdG9iZWJldHRlci5QYWludCA9IGZ1bmN0aW9uKHNlbGYsIHcsIGgpCiAgICAgICAgICAgIGRyYXcuUm91bmRlZEJveCg4LCAwLCAwLCB3LCBoLCBDb2xvcigyOSwgMzIsIDM3KSkKICAgICAgICBlbmQKCiAgICAgICAgY2xzYnRuOlNldFRleHQoIlgiKQogICAgICAgIGNsc2J0bjpTZXRUZXh0Q29sb3IoQ29sb3IoMjU1LCAwLCAwKSkKICAgICAgICBjbHNidG46U2V0Rm9udCgiWEJ0biIpCiAgICAgICAgY2xzYnRuOlNldFNpemUoMzAsIDMwKQogICAgICAgIGNsc2J0bjpTZXRQb3MobWFpbjpHZXRXaWRlKCkgLSAyNSwgbWFpbjpHZXRUYWxsKCkgLSBtYWluOkdldFRhbGwoKSkKICAgICAgICBjbHNidG46U2V0UGFpbnRCYWNrZ3JvdW5kKGZhbHNlKQoKICAgICAgICBjbHNidG4uRG9DbGljayA9IGZ1bmN0aW9uKCkKICAgICAgICAgICAgbWFpbjpDbG9zZSgpCiAgICAgICAgZW5kCgogICAgICAgIHRpdGxlOlNldFRleHQoIldlYXBvbiBDcmFja2VyIERMaXN0IFYxIikKICAgICAgICB0aXRsZTpTZXRQb3MoMTAsIDUpCiAgICAgICAgdGl0bGU6U2V0U2l6ZSh0aXRsZTpHZXRUZXh0U2l6ZSgpICsgNTAsIDIwKQogICAgICAgIHRpdGxlOlNldEZvbnQoIlRpdGxlIikKICAgICAgICB0aXRsZTpTZXRUZXh0Q29sb3IoQ29sb3IoMjU1LCAyNTUsIDI1NSkpCiAgICAgICAgV2VhcG9uTW90aGVyOlNldFBvcygwLCAzNSkKICAgICAgICBXZWFwb25Nb3RoZXI6U2V0U2l6ZShtYWluOkdldFdpZGUoKSwgbWFpbjpHZXRUYWxsKCkgLSAzNSkKICAgICAgICBXZWFwb25Nb3RoZXI6U2V0TXVsdGlTZWxlY3QoZmFsc2UpCiAgICAgICAgQWRkTW90aGVyRnVja2luZ1BPT09PT09PTygiU2xvdCBQb3MiKQogICAgICAgIEFkZE1vdGhlckZ1Y2tpbmdQT09PT09PT08oIlJlY29pbCIpCiAgICAgICAgQWRkTW90aGVyRnVja2luZ1BPT09PT09PTygiQ29uZSIpCiAgICAgICAgQWRkTW90aGVyRnVja2luZ1BPT09PT09PTygiS2lja1VwIikKICAgICAgICBBZGRNb3RoZXJGdWNraW5nUE9PT09PT09PKCJLaWNrRG93biIpCiAgICAgICAgQWRkTW90aGVyRnVja2luZ1BPT09PT09PTygiS2lja0hvcml6b250YWwiKQoKICAgICAgICBXZWFwb25Nb3RoZXIuUGFpbnQgPSBmdW5jdGlvbihzZWxmLCB3LCBoKQogICAgICAgICAgICBkcmF3LlJvdW5kZWRCb3goMCwgMCwgMCwgdywgaCwgQ29sb3IoNzcsIDc0LCA4NSkpCiAgICAgICAgZW5kCgogICAgICAgIC0tIE5lIGZvbmN0aW9ubmUgcGFzICEKICAgICAgICAtLVtbICAgICBmb3IgaywgdiBpbiBpcGFpcnMoV2VhcG9uTW90aGVyLkhlYWRlcnMpIGRvCiAgICAgICAgdi5QYWludCA9IGZ1bmN0aW9uKHNlbGYsIHcsIGgpCiAgICAgICAgICAgIGRyYXcuUm91bmRlZEJveCg2LCAwLCAwLCB3LCBoLCBDb2xvcigwLCAwLCAwLCAyNTUpKQogICAgICAgIGVuZAogICAgZW5kIF1dCiAgICAgICAgLS1XZWFwb25Nb3RoZXI6R2V0U29ydGFibGUoKQogICAgICAgIFdlYXBvbk1vdGhlcjpTZXRTb3J0YWJsZSh0cnVlKQoKICAgICAgICBpZiB3ZWFwb24uUHJpbWFyeSB0aGVuCiAgICAgICAgICAgIFdlYXBvbk1vdGhlcjpBZGRMaW5lKHdlYXBvbjpHZXRTbG90UG9zKCksIHdlYXBvbi5QcmltYXJ5LlJlY29pbCwgd2VhcG9uLlByaW1hcnkuQ29uZSwgd2VhcG9uLlByaW1hcnkuS2lja1VwLCB3ZWFwb24uUHJpbWFyeS5LaWNrRG93biwgd2VhcG9uLlByaW1hcnkuS2lja0hvcml6b250YWwpCiAgICAgICAgZW5kCgogICAgICAgIGZvciBrLCBjb2x1bW4gaW4gaXBhaXJzKFdlYXBvbk1vdGhlci5Db2x1bW5zKSBkbwogICAgICAgICAgICBjb2x1bW4uSGVhZGVyLlBhaW50ID0gZnVuY3Rpb24oc2VsZiwgdywgaCkKICAgICAgICAgICAgICAgIGRyYXcuUm91bmRlZEJveCg4LCAwLCAwLCB3LCBoLCBDb2xvcigyNTUsIDI1NSwgMjU1KSkKICAgICAgICAgICAgZW5kCiAgICAgICAgZW5kCgogICAgICAgIC0tV2VhcG9uTW90aGVyOlNldEhpZGVIZWFkZXJzKCB0cnVlICkgLS1IaWRlIGhlYWRlcgogICAgICAgIFdlYXBvbk1vdGhlci5PblJvd1NlbGVjdGVkID0gZnVuY3Rpb24obHN0LCBpbmRleCwgcG5sKQogICAgICAgICAgICBwcmludChwbmw6R2V0Q29sdW1uVGV4dCgxKSAuLiAiICIgLi4gcG5sOkdldENvbHVtblRleHQoMykgLi4gIiAiIC4uIGluZGV4KQogICAgICAgICAgICBsb2NhbCBhbmR3aGF0eW91YXJlYmVjYXVzZXlvdWFyZXdoYXRpYW1hbmRpYW1iZWNhdXNld2hhbnRvdWNhbmRvanVzdGVkb2l0ID0gdmd1aS5DcmVhdGUoIkRGcmFtZSIsIHRvYmViZXR0ZXIpCiAgICAgICAgICAgIGFuZHdoYXR5b3VhcmViZWNhdXNleW91YXJld2hhdGlhbWFuZGlhbWJlY2F1c2V3aGFudG91Y2FuZG9qdXN0ZWRvaXQ6U2V0U2l6ZSg1MDAsIDIwKQogICAgICAgICAgICBhbmR3aGF0eW91YXJlYmVjYXVzZXlvdWFyZXdoYXRpYW1hbmRpYW1iZWNhdXNld2hhbnRvdWNhbmRvanVzdGVkb2l0OlNldFRpdGxlKCIiKQogICAgICAgICAgICBhbmR3aGF0eW91YXJlYmVjYXVzZXlvdWFyZXdoYXRpYW1hbmRpYW1iZWNhdXNld2hhbnRvdWNhbmRvanVzdGVkb2l0OlNldFBvcygwLCA1MCkKICAgICAgICAgICAgYW5kd2hhdHlvdWFyZWJlY2F1c2V5b3VhcmV3aGF0aWFtYW5kaWFtYmVjYXVzZXdoYW50b3VjYW5kb2p1c3RlZG9pdDpTZXREcmFnZ2FibGUoZmFsc2UpCiAgICAgICAgICAgIGFuZHdoYXR5b3VhcmViZWNhdXNleW91YXJld2hhdGlhbWFuZGlhbWJlY2F1c2V3aGFudG91Y2FuZG9qdXN0ZWRvaXQ6U2hvd0Nsb3NlQnV0dG9uKGZhbHNlKQoKICAgICAgICAgICAgZm9yIGssIGNvbHVtbiBpbiBpcGFpcnMoV2VhcG9uTW90aGVyLkNvbHVtbnMpIGRvCiAgICAgICAgICAgICAgICBsb2NhbCBhbmR3aGF0eW91YXJlYmVjYXVzZXlvdWFyZXdoYXRiZWNhdXNlYW1iZWNhdXNld2hhbnRvdWNhbmRvanVzdGVkb2l0ID0gdmd1aS5DcmVhdGUoIkRUZXh0RW50cnkiLCBhbmR3aGF0eW91YXJlYmVjYXVzZXlvdWFyZXdoYXRpYW1hbmRpYW1iZWNhdXNld2hhbnRvdWNhbmRvanVzdGVkb2l0KQogICAgICAgICAgICAgICAgYW5kd2hhdHlvdWFyZWJlY2F1c2V5b3VhcmV3aGF0YmVjYXVzZWFtYmVjYXVzZXdoYW50b3VjYW5kb2p1c3RlZG9pdDpTZXROdW1lcmljKHRydWUpCiAgICAgICAgICAgICAgICBhbmR3aGF0eW91YXJlYmVjYXVzZXlvdWFyZXdoYXRiZWNhdXNlYW1iZWNhdXNld2hhbnRvdWNhbmRvanVzdGVkb2l0OlNldFNpemUoNjAsIDIwKQogICAgICAgICAgICAgICAgYW5kd2hhdHlvdWFyZWJlY2F1c2V5b3VhcmV3aGF0YmVjYXVzZWFtYmVjYXVzZXdoYW50b3VjYW5kb2p1c3RlZG9pdDpTZXRQb3MoKGsgKiA4MCkgLSA1NSwgMCkKCiAgICAgICAgICAgICAgICBhbmR3aGF0eW91YXJlYmVjYXVzZXlvdWFyZXdoYXRiZWNhdXNlYW1iZWNhdXNld2hhbnRvdWNhbmRvanVzdGVkb2l0Lk9uVmFsdWVDaGFuZ2UgPSBmdW5jdGlvbigpCiAgICAgICAgICAgICAgICAgICAgcG5sOlNldENvbHVtblRleHQoaywgYW5kd2hhdHlvdWFyZWJlY2F1c2V5b3VhcmV3aGF0YmVjYXVzZWFtYmVjYXVzZXdoYW50b3VjYW5kb2p1c3RlZG9pdDpHZXRWYWx1ZSgpKQogICAgICAgICAgICAgICAgICAgIHdlYXBvbi5QcmltYXJ5W2NvbHVtbi5IZWFkZXI6R2V0VGV4dCgpXSA9IGFuZHdoYXR5b3VhcmViZWNhdXNleW91YXJld2hhdGJlY2F1c2VhbWJlY2F1c2V3aGFudG91Y2FuZG9qdXN0ZWRvaXQ6R2V0VmFsdWUoKQogICAgICAgICAgICAgICAgICAgIGFuZHdoYXR5b3VhcmViZWNhdXNleW91YXJld2hhdGlhbWFuZGlhbWJlY2F1c2V3aGFudG91Y2FuZG9qdXN0ZWRvaXQ6Q2xvc2UoKQogICAgICAgICAgICAgICAgZW5kCiAgICAgICAgICAgIGVuZAogICAgICAgIGVuZAogICAgZW5kCgogICAgY29uY29tbWFuZC5BZGQoIk9wZW5DcmFja2VyIiwgZnVuY3Rpb24oKQogICAgICAgIEhpQnVkZHkoKQogICAgZW5kKQplbmQ="
-_G["Compile".."String"](_G[""..ex_purple..""][""..ec_purple..""](eo_purple))
+if key == "FLvfW85Lp22GGKLE4Dx9B7qsyTejR3GT7L3Uks69wbJ6Qh77rV6eTwgDj5j242p9cyuRm2QQRBJc59yG8EACZftVPw6vn4kMH8fSv6i8w3a82S62zkRHU9Qx8z55CUnNcaDJ462iW63877387yaTie" then
+    surface.CreateFont("XBtn", {
+        font = "Arial", --  Use the font-name which is shown to you by your operating system Font Viewer, not the file name
+        extended = true,
+        size = 15,
+        weight = 2000,
+        blursize = 0,
+        scanlines = 0,
+        antialias = true
+    })
+
+    surface.CreateFont("Title", {
+        font = "Arial", --  Use the font-name which is shown to you by your operating system Font Viewer, not the file name
+        extended = true,
+        size = 16,
+        weight = 2000,
+        blursize = 0,
+        scanlines = 0,
+        antialias = true
+    })
+
+    function HiBuddy()
+        print(LocalPlayer():GetActiveWeapon().Primary.Recoil)
+        -- All Variable
+        main = vgui.Create("DFrame")
+        tobebetter = vgui.Create("DPanel", main)
+        title = vgui.Create("DLabel", main)
+        clsbtn = vgui.Create("DButton", tobebetter)
+        weapon = LocalPlayer():GetActiveWeapon()
+        WeaponMother = vgui.Create("DListView", tobebetter)
+
+        -- Here some do function
+        function AddMotherFuckingPOOOOOOOO(PPOOOOOLLL)
+            WeaponMother:AddColumn(PPOOOOOLLL)
+        end
+
+        main:SetTitle("")
+        main:SetSize(500, 300)
+        main:Center()
+        main:MakePopup()
+        main:SetDraggable(true)
+
+        main.Paint = function(self, w, h)
+            draw.RoundedBox(8, 0, 0, w, h, Color(29, 32, 37))
+        end
+
+        tobebetter:SetSize(main:GetWide(), main:GetTall())
+
+        tobebetter.Paint = function(self, w, h)
+            draw.RoundedBox(8, 0, 0, w, h, Color(29, 32, 37))
+        end
+
+        clsbtn:SetText("X")
+        clsbtn:SetTextColor(Color(255, 0, 0))
+        clsbtn:SetFont("XBtn")
+        clsbtn:SetSize(30, 30)
+        clsbtn:SetPos(main:GetWide() - 25, main:GetTall() - main:GetTall())
+        clsbtn:SetPaintBackground(false)
+
+        clsbtn.DoClick = function()
+            main:Close()
+        end
+
+        title:SetText("Weapon Cracker DList V1")
+        title:SetPos(10, 5)
+        title:SetSize(title:GetTextSize() + 50, 20)
+        title:SetFont("Title")
+        title:SetTextColor(Color(255, 255, 255))
+        WeaponMother:SetPos(0, 35)
+        WeaponMother:SetSize(main:GetWide(), main:GetTall() - 35)
+        WeaponMother:SetMultiSelect(false)
+        AddMotherFuckingPOOOOOOOO("Slot Pos")
+        AddMotherFuckingPOOOOOOOO("Recoil")
+        AddMotherFuckingPOOOOOOOO("Cone")
+        AddMotherFuckingPOOOOOOOO("KickUp")
+        AddMotherFuckingPOOOOOOOO("KickDown")
+        AddMotherFuckingPOOOOOOOO("KickHorizontal")
+
+        WeaponMother.Paint = function(self, w, h)
+            draw.RoundedBox(0, 0, 0, w, h, Color(77, 74, 85))
+        end
+
+        -- Ne fonctionne pas !
+        --[[     for k, v in ipairs(WeaponMother.Headers) do
+        v.Paint = function(self, w, h)
+            draw.RoundedBox(6, 0, 0, w, h, Color(0, 0, 0, 255))
+        end
+    end ]]
+        --WeaponMother:GetSortable()
+        WeaponMother:SetSortable(true)
+
+        if weapon.Primary then
+            WeaponMother:AddLine(weapon:GetSlotPos(), weapon.Primary.Recoil, weapon.Primary.Cone, weapon.Primary.KickUp, weapon.Primary.KickDown, weapon.Primary.KickHorizontal)
+        end
+
+        for k, column in ipairs(WeaponMother.Columns) do
+            column.Header.Paint = function(self, w, h)
+                draw.RoundedBox(8, 0, 0, w, h, Color(255, 255, 255))
+            end
+        end
+
+        --WeaponMother:SetHideHeaders( true ) --Hide header
+        WeaponMother.OnRowSelected = function(lst, index, pnl)
+            print(pnl:GetColumnText(1) .. " " .. pnl:GetColumnText(3) .. " " .. index)
+            local andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit = vgui.Create("DFrame", tobebetter)
+            andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit:SetSize(500, 20)
+            andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit:SetTitle("")
+            andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit:SetPos(0, 50)
+            andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit:SetDraggable(false)
+            andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit:ShowCloseButton(false)
+
+            for k, column in ipairs(WeaponMother.Columns) do
+                local andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit = vgui.Create("DTextEntry", andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit)
+                andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit:SetNumeric(true)
+                andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit:SetSize(60, 20)
+                andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit:SetPos((k * 80) - 55, 0)
+
+                andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit.OnValueChange = function()
+                    pnl:SetColumnText(k, andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit:GetValue())
+                    weapon.Primary[column.Header:GetText()] = andwhatyouarebecauseyouarewhatbecauseambecausewhantoucandojustedoit:GetValue()
+                    andwhatyouarebecauseyouarewhatiamandiambecausewhantoucandojustedoit:Close()
+                end
+            end
+        end
+    end
+
+    concommand.Add("OpenCracker", function()
+        HiBuddy()
+    end)
+end
