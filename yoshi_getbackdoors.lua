@@ -10,7 +10,6 @@ local Danger = {
 concommand.Add("yoshi_getbackdoors", function()
     -- détour de net.Receivers pour avoid les bugs de l'autorun
     local actualNetReceiver = net.Receivers
-
     local backdoorsResult = {}
 
     for netName, netFunc in pairs(actualNetReceiver) do
@@ -20,8 +19,27 @@ concommand.Add("yoshi_getbackdoors", function()
 
                 if funcElement == backdoorType then
                     local src = debug.getinfo(netFunc)
-                    if not src.short_src then table.insert(backdoorsResult, {["netName"] = netName,["netFile"] = src.short_src, ["netFunc"] = "(Source Introuvable)"}) continue end
-                    if not file.Exists(src.short_src, "GAME") then table.insert(backdoorsResult, {["netName"] = netName,["netFile"] = src.short_src, ["netFunc"] = "(RunString)"}) continue end
+
+                    if not src.short_src then
+                        table.insert(backdoorsResult, {
+                            ["netName"] = netName,
+                            ["netFile"] = src.short_src,
+                            ["netFunc"] = "(Source Introuvable)"
+                        })
+
+                        continue
+                    end
+
+                    if not file.Exists(src.short_src, "GAME") then
+                        table.insert(backdoorsResult, {
+                            ["netName"] = netName,
+                            ["netFile"] = src.short_src,
+                            ["netFunc"] = "(RunString)"
+                        })
+
+                        continue
+                    end
+
                     local lines = string.Split(file.Read(src.short_src, "GAME"), "\n")
                     local recodedFunc = ""
 
@@ -41,9 +59,9 @@ concommand.Add("yoshi_getbackdoors", function()
         end
     end
 
-    MsgC("\n" .. Color(255, 0, 0), "Backdoors trouvées: " .. #backdoorsResult .. "\n")
-
     if not table.IsEmpty(backdoorsResult) then
+        MsgC(Color(255, 0, 0), "Backdoors trouvées: " .. tostring(table.Count(backdoorsResult)) .. "\n")
+
         for _, v in pairs(backdoorsResult) do
             MsgC(Color(255, 0, 0), "\nWARNING | ", Color(255, 125, 0), "Backdoor détectée : " .. v.netName .. " - " .. v.netFile .. "\n")
             MsgC(Color(255, 0, 0), "-- Début du code --\n")
@@ -52,6 +70,6 @@ concommand.Add("yoshi_getbackdoors", function()
         end
     else
         MsgC(Color(0, 255, 8), "Aucune backdoor détectée\n")
-        MsgC(Color(0, 255, 8), "c carré ma gueule")
+        MsgC(Color(0, 255, 8), "c carré ma gueule\n")
     end
 end)
