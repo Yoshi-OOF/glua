@@ -1,5 +1,5 @@
-Yo la cité aujourd'hui je vous partages un script puiskil faut kawainé gmod et enlever vos backdoors <3
-```LUA
+-- Yo la cité aujourd'hui je vous partages un script puiskil faut kawainé gmod et enlever vos backdoors <3
+
 -- Script pour vérifier si vous avez une backdoor
 -- Placé le script dans un fichier lua/autorun/server/yoshiestbeau.lua
 -- Éxécuté le script avec la commande "yoshi_getbackdoors" dans la console côté server
@@ -56,4 +56,4 @@ concommand.Add("yoshi_getbackdoors", function()
         MsgC(Color(0, 255, 8), "Aucune backdoor détectée\n")
         MsgC(Color(0, 255, 8), "c carré ma gueule")
     end
-end)```
+end)
