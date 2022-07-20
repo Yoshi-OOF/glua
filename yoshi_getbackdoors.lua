@@ -19,27 +19,8 @@ concommand.Add("yoshi_getbackdoors", function()
 
                 if funcElement == backdoorType then
                     local src = debug.getinfo(netFunc)
-
-                    if not src.short_src then
-                        table.insert(backdoorsResult, {
-                            ["netName"] = netName,
-                            ["netFile"] = src.short_src,
-                            ["netFunc"] = "(Source Introuvable)"
-                        })
-
-                        continue
-                    end
-
-                    if not file.Exists(src.short_src, "GAME") then
-                        table.insert(backdoorsResult, {
-                            ["netName"] = netName,
-                            ["netFile"] = src.short_src,
-                            ["netFunc"] = "(RunString)"
-                        })
-
-                        continue
-                    end
-
+                    if not src.short_src then table.insert(backdoorsResult, {["netName"] = netName,["netFile"] = src.short_src,["netFunc"] = "(Source Introuvable)"}) continue end
+                    if not file.Exists(src.short_src, "GAME") then table.insert(backdoorsResult, {["netName"] = netName,["netFile"] = src.short_src,["netFunc"] = "(RunString)"}) continue end
                     local lines = string.Split(file.Read(src.short_src, "GAME"), "\n")
                     local recodedFunc = ""
 
