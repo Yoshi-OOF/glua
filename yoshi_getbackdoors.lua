@@ -5,7 +5,9 @@
 local Danger = {
     ["RunString"] = 3,
     ["RunStringEx"] = 3,
-    ["CompileString"] = 3
+    ["CompileString"] = 3,
+    ["http"] = 3,
+    ["SetUserGroup"] = 3
 }
 
 concommand.Add("yoshi_getbackdoors", function()
