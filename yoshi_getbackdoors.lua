@@ -1,7 +1,7 @@
 -- Script pour vérifier si vous avez une backdoor
 -- Placer le script dans un fichier lua/autorun/server/yoshiestbeau.lua
 -- Éxécuter le script avec la commande "yoshi_getbackdoors" dans la console côté server
--- Si vous avez une backdoor et qu'il vous est impossible de l'enlever, contacter Yoshi#7642
+-- Si vous avez une backdoor et qu'il vous est impossible de l'enlever, bah tampis pour vous :)
 local Danger = {
     ["RunString"] = 3,
     ["RunStringEx"] = 3,
